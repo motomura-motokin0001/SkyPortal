@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField,Header("移動速度")] private float _MoveSpeed;//#2B 移動速度
     [SerializeField,Header("ジャンプ")] private float _Jump; //#2B ジャンプ力
-    private Vector2 _InputDirection; //#2B 入力の値を格納する変数)
+    [SerializeField,Header("インベントリCanvas")] private GameObject _Inventory; //#2B インベントリのオブジェクトを格納する変数
+    private Vector2 _InputDirection; //#2B 入力の値を格納する変数
     private Rigidbody2D _Rigid2D; //#2B Rigidbody2Dを格納する変数
     private bool _IsJump; //#2B ジャンプしているかどうか
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _Rigid2D = GetComponent<Rigidbody2D>();//#gRigidbody2Dを取得
         _IsJump = false; 
+        // _Inventory.SetActive(false); //#Gインベントリを非表示にする
 
     }
 
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void _Move()
     {
-        _Rigid2D.linearVelocity = new Vector2(_InputDirection.x * _MoveSpeed , _Rigid2D.linearVelocity.y); //#G移動
+        _Rigid2D.linearVelocity = new Vector2(_InputDirection.x * _MoveSpeed , _Rigid2D.linearVelocity.y); //#G 移動
     }
 
 
@@ -57,6 +59,16 @@ private void OnCollisionEnter2D(Collision2D collision)
             }
             _Rigid2D.AddForce(Vector2.up * _Jump , ForceMode2D.Impulse); //#G上方向に力を加える
             _IsJump = true;
+        }
+    }
+
+//#Yインベントリを開く処理
+    public void _OnOpenInventory(InputAction.CallbackContext context) 
+    {
+        if (context.performed) //#P入力されたら
+        {
+            Debug.Log("インベントリ"); //#Gデバッグログを表示
+            _Inventory.SetActive(!_Inventory.activeSelf); //#Gインベントリの表示・非表示を切り替える処理
         }
     }
 }

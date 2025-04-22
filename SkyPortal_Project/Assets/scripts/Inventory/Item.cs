@@ -14,4 +14,9 @@ public class Item : ScriptableObject
         Consumable,
         material
     }
+        public virtual void Use()
+    {
+        Debug.Log("使った：" + itemName);
+        // ここでアイテム効果を実行
+    }
 }

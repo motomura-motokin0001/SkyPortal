@@ -27,7 +27,7 @@
                     "name": "Fire",
                     "type": "Button",
                     "id": "8e390887-8414-4096-9d3d-2c68e665f6af",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -36,6 +36,15 @@
                     "name": "jump",
                     "type": "Button",
                     "id": "23176e59-6360-4e8b-b848-318cec4aaa0a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InventoryOpen",
+                    "type": "Button",
+                    "id": "fe0964fc-0e05-45af-bf3a-2d864ed556f8",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -282,6 +291,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1636e33f-3506-4aff-896d-a4f8404c1b09",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InventoryOpen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a50e9440-4f8c-4b54-bf64-8c1aa9d5d063",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InventoryOpen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

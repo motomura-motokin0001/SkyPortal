@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0eb3c94dcaf7b479b0ce6c985fb2b8, type: 3}
-  m_Name: ItemDataBase
+  m_Script: {fileID: 11500000, guid: bd2b2e982c0e932429494a0f10d41162, type: 3}
+  m_Name: StorePickAxe
   m_EditorClassIdentifier: 
-  itemList:
-  - ItemName: 
-    itemDescription: 
-    itemID: 0
-    itemIcon: {fileID: 0}
-    itemType: 0
+  itemName: StorePickAxe
+  icon: {fileID: -5225540622116197949, guid: 1dc4464701c5cab439e619b41d816167, type: 3}
+  itemType: 1
